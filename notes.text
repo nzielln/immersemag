@@ -1,0 +1,23 @@
+FONTS:
+
+<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|Playfair+Display:400,400i,700,700i" rel="stylesheet">
+
+font-family: 'Playfair Display', serif;
+font-family: 'Oswald', sans-serif;
+
+
+COLORS: 
+#ffa495
+#000000
+#ffffff
+#83ede1
+#ffecd5
+#ffeded
+#9c472e
+#808080
+#24110a
+#db131a
+#de8f63
+#e0bd93
+#bab127
+#fff6eb
