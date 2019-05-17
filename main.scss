@@ -2,9 +2,6 @@
   padding: 0px;
   margin: 0px;
   background-color: #fff;
-
-
-
 }
 //variables
 $serif-font: 'Playfair Display', serif;
@@ -37,7 +34,6 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
 }
 
 header {
@@ -52,8 +48,8 @@ header {
     right: 30px;
     left: 30px;
   }
-
 }
+
 nav {
   width: 90%;
   height: 60px;
@@ -61,14 +57,11 @@ nav {
   align-items: center;
   justify-content: space-between;
   background: rgba($black, 0.0);
-
-
   img {
     width: 50px;
     height: auto;
     margin-right: 155px;
     background: rgba($black, 0.0);
-
   }
   ul {
     width: 50%;
@@ -77,20 +70,17 @@ nav {
     justify-content: center;
     align-items: center;
     background: rgba($black, 0.0);
-
-li {
-  width: 50px;
-  margin: 0px 50px;
-  display: flex;
-  align-items: center;
-  background: rgba($black, 0.0);
-  font-family: $serif-font;
-  font-size: 16px;
-  letter-spacing: .4px;
-
-
+    li {
+    width: 50px;
+    margin: 0px 50px;
+    display: flex;
+    align-items: center;
+    background: rgba($black, 0.0);
+    font-family: $serif-font;
+    font-size: 16px;
+    letter-spacing: .4px;
   }
-    }
+}
 svg {
   height: 20px;
   width: 20px;
@@ -99,13 +89,11 @@ svg {
     right: 15px;
     left: 15px;
   }
-
 }
 #inst {
   margin-left: 155px;
 }
   }
-
 
 //main
 .landing {
@@ -115,28 +103,32 @@ justify-content: flex-end;
 .blue {
   position: absolute;
   z-index: 0;
-  width: 1700px;
+  width: 0px;
   height: 600px;
   background: $blue;
   right: 20px;
   top: 300px;
+  animation: bluegrow 500ms linear 1s 1 normal forwards running
 }
 .yellow {
   position: absolute;
   z-index: 8;
   width: 40px;
-  height: 1800px;
+  height: 0px;
   background: $yellow;
   right: 700px;
+  animation: yellowgrow 500ms linear 1s 1 normal forwards running
 }
 .lightpink {
   position: absolute;
-  width: 100%;
+  left: 0px;
+  width: 0%;
   height: 300px;
   background: $lightpink;
   z-index: 11;
   right: 20px;
   top: 600px;
+  animation: pinkgrow 500ms linear 1.1s 1 normal forwards running
 }
 .blue-copy {
   position: absolute;
@@ -152,29 +144,28 @@ justify-content: flex-end;
     left: 550px;
     z-index: 20;
   #red {
+    position: absolute;
     background: rgba($blue, 0);
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
     height: 600px;
-
+    width: 400px;
+    animation: redgrow 1s linear 1s 1 normal forwards running
   }
-
-  }
-
+}
   .img2 {
     position: absolute;
     background: rgba($blue, 0);
     top: 50px;
-    left: 280px;
+    left: -800px;
     z-index: 18;
+    animation: plaidmoves 800ms linear 1.3s 1 normal forwards running;
     #plaid {
       background: rgba($blue, 0);
       height: 550px;
-
-
     }
   }
 }
-
-
   .title {
     position: absolute;
     width: 100%;
@@ -185,7 +176,6 @@ justify-content: flex-end;
       font-family: $sans-font;
       color: $white;
     }
-
     #start, #line-start {
       background-color: rgba($black, 0);
       font-size: 250px;
@@ -193,15 +183,16 @@ justify-content: flex-end;
       left: -600px;
       top: 10px;
       font-weight: 700;
-
+      opacity: 0;
+      animation: begmoves 1.2s linear 2.1s 1 normal forwards running;
     }
-
   #line-start {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-color: $black;
     -webkit-text-stroke-width: 3px;
     top: -10px;
     left: -610px;
+    animation: begoutlinemoves 900ms linear 3.1s 1 normal forwards running;
 
   }
     #end, #line-end {
@@ -211,6 +202,8 @@ justify-content: flex-end;
       right: -220px;
       top: 430px;
       font-weight: 700;
+      opacity: 0;
+      animation: begmoves 1.2s linear 2.1s 1 normal forwards running;
 
     }
     #line-end {
@@ -219,13 +212,16 @@ justify-content: flex-end;
       -webkit-text-stroke-width: 4px;
       right: -160px;
       top: 360px;
+      animation: endoutlinemoves 900ms linear 3.1s 1 normal forwards running;
     }
-
 .caption {
   position: absolute;
   background-color: rgba($black, 0);
   top: 280px;
   left: 1100px;
+  opacity: 0;
+  animation: begmoves 1.2s linear 2.1s 1 normal forwards running;
+
     h3 {
       background-color: rgba($black, 0);
       letter-spacing: 2px;
@@ -233,28 +229,20 @@ justify-content: flex-end;
         family: $serif-font;
         size: 30px;
         weight: 400;
-
       }
       color: $white;
-
     }
     #italic {
-
       background-color: rgba($black, 0);
       font-style: italic;
       letter-spacing: 3px;
-      margin-left: 50px;
+      margin-left: 0px;
+      animation: linemoves 900ms linear 3.1s 1 normal forwards running;
 
       }
-
     }
-
   }
-
 }
-
-
-
 
 //shop
 .new-items {
@@ -263,7 +251,7 @@ justify-content: flex-end;
   top: 150px;
  #title {
 position: absolute;
-top: 900px;
+top: 850px;
 height: 40px;
 background-color: rgba($black, 0);
 left: 50%;
@@ -279,13 +267,13 @@ font: {
   .item {
     position: absolute;
     top: 1000px;
-
   }
   .box1 {
     position: absolute;
-    left: 160px;
+    left: 290px;
     img {
       height: 550px;
+      border: 2px solid $pink;
     }
     #zagzig {
       position: absolute;
@@ -297,13 +285,20 @@ font: {
     }
     .line-box {
       position: absolute;
-      top: -30px;
-      right: -400px;
+      top: 0px;
+      right: -370px;
       background-color: rgba($black, 0);
-      height: 530px;
-      width: 370px;
-      border: 2px solid $pink;
+      height: 550px;
+      width: 365px;
+      border: 3px solid $pink;
       z-index: 60;
+      animation: item1 900ms linear 1 normal forwards;
+      animation-play-state: paused;
+
+      &:hover {
+         animation-play-state: running;
+
+      }
     }
 
     #item1-top {
@@ -330,11 +325,9 @@ font: {
       h4 {
         line-height: 24px;
         background-color: rgba($black, 0);
-
         font: {
           family: $sans-font;
           size: 16px;
-
         }
       }
       #item-name {
@@ -347,7 +340,6 @@ font: {
         position: absolute;
         display: flex;
         background-color: rgba($black, 0);
-
       }
     .one, .two, .three {
       background-color: rgba($black, 0);
@@ -365,15 +357,12 @@ font: {
     }
     .two {
       background: $black;
-
     }
     .three {
       background: $gray;
-
     }
     .cart {
       background-color: rgba($black, 0);
-
     }
     #cart {
       background-color: rgba($black, 0);
@@ -385,7 +374,6 @@ font: {
     }
     }
     }
-
   }
 
   //item two
@@ -395,6 +383,7 @@ font: {
     top: 1300px;
     img {
       height: 550px;
+      border: 2px solid $blue;
     }
     .line-box {
       position: absolute;
@@ -405,6 +394,13 @@ font: {
       width: 380px;
       border: 3px solid $blue;
       z-index: 0;
+      animation: item2 900ms linear 1 normal forwards;
+      animation-play-state: paused;
+
+      &:hover {
+         animation-play-state: running;
+
+      }
     }
     #item2-top {
       position: absolute;
@@ -432,7 +428,6 @@ font: {
         font: {
           family: $sans-font;
           size: 16px;
-
         }
       }
       #item-name {
@@ -445,7 +440,6 @@ font: {
         position: absolute;
         display: flex;
         background-color: rgba($black, 0);
-
       }
     .one, .two, .three {
       background-color: rgba($black, 0);
@@ -463,15 +457,12 @@ font: {
     }
     .two {
       background: $black;
-
     }
     .three {
       background: $blue;
-
     }
     .cart {
       background-color: rgba($black, 0);
-
     }
     #cart {
       background-color: rgba($black, 0);
@@ -480,11 +471,10 @@ font: {
       margin: {
       top: 20px;
       left: 85px;
+      }
     }
-    }
-    }
-
   }
+}
 
   //item three
   .box3 {
@@ -493,16 +483,24 @@ font: {
     top: 1800px;
     img,  {
       height: 550px;
+      border: 2px solid $black;
     }
     .line-box {
       position: absolute;
-      top: 300px;
+      top: 100px;
       right: -325px;
       background-color: rgba($black, 0);
-      height: 280px;
+      height: 460px;
       width: 500px;
       border: 3px solid $black;
       z-index: 60;
+      animation: item3 900ms linear 1 normal forwards;
+      animation-play-state: paused;
+
+      &:hover {
+         animation-play-state: running;
+
+      }
     }
     #item3-top {
       position: absolute;
@@ -518,49 +516,43 @@ font: {
       height: 40px;
       fill: $black;
     }
-h2 {
-  position: absolute;
-  left: 500px;
-z-index: 90;
-  bottom: 120px;
-  letter-spacing: 2px;
-  background-color: rgba($black, 0);
-
+  h2 {
+    position: absolute;
+    left: 500px;
+    z-index: 90;
+    bottom: 120px;
+    letter-spacing: 2px;
+    background-color: rgba($black, 0);
   font: {
     family: $serif-font;
     size: 60px;
     weight: lighter;
     style: italic;
-
   }
-}
-
-#red {
-  top: -170px;
-  left: 530px;
-  color: $red;
-}
-#brown {
-  top: -140px;
-  left: 560px;
-  color: $lightbrown;
-}
-
-.info {
-  width: 250px;
-  background-color: rgba($black, 0);
-  position: absolute;
-  bottom: 60px;
-  h4 {
-    line-height: 24px;
+  }
+  #red {
+    top: -170px;
+    left: 530px;
+    color: $red;
+  }
+  #brown {
+    top: -140px;
+    left: 560px;
+    color: $lightbrown;
+  }
+  .info {
+    width: 250px;
     background-color: rgba($black, 0);
-
-    font: {
-      family: $sans-font;
-      size: 16px;
-
+    position: absolute;
+    bottom: 60px;
+    h4 {
+      line-height: 24px;
+      background-color: rgba($black, 0);
+      font: {
+        family: $sans-font;
+        size: 16px;
+      }
     }
-  }
   #item-name {
     font-weight: 600;
   }
@@ -571,49 +563,42 @@ z-index: 90;
     position: absolute;
     display: flex;
     background-color: rgba($black, 0);
-
+    }
+  .one, .two, .three {
+    background-color: rgba($black, 0);
+    margin: {
+      top: 20px;
+      right: 10px;
+    }
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba($black, 0);
   }
-.one, .two, .three {
-  background-color: rgba($black, 0);
-  margin: {
+  .one {
+    background: $evenlighterbrwn;
+  }
+  .two {
+    background: $green;
+  }
+  .three {
+    background: $lightbrown;
+  }
+  .cart {
+    background-color: rgba($black, 0);
+  }
+  #cart {
+    background-color: rgba($black, 0);
+    width: 20px;
+    height: 20px;
+    margin: {
     top: 20px;
-    right: 10px;
-  }
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 1px solid rgba($black, 0);
-}
-.one {
-  background: $evenlighterbrwn;
-}
-.two {
-  background: $green;
-
-}
-.three {
-  background: $lightbrown;
-
-}
-.cart {
-  background-color: rgba($black, 0);
-
-}
-#cart {
-  background-color: rgba($black, 0);
-  width: 20px;
-  height: 20px;
-  margin: {
-  top: 20px;
-  left: 85px;
-}
-}
-}
+    left: 85px;
+        }
+      }
+    }
   }
 }
-
-
-
 
 //footer
 footer {
@@ -628,14 +613,10 @@ footer {
     background: rgba($black, 0);
     left: 40px;
     top: 40px;
-
   }
-
   .summary {
     display: flex;
-
     background: rgba($black, 0);
-
     ul {
       background: rgba($black, 0);
       list-style: none;
@@ -644,7 +625,6 @@ footer {
         left: 25px;
         right: 25px;
       }
-
     }
     li {
       background: rgba($black, 0);
@@ -654,39 +634,31 @@ footer {
         family: $sans-font;
         size: 14px;
         weight: 300;
-
       }
-
     }
     #main {
       font-weight: 600;
     }
-
-
   }
 .social {
   background: rgba($black, 0);
   position: absolute;
   left: 550px;
   display: flex;
-
   svg {
     background: rgba($black, 0);
     width: 10px;
     height: 40px;
     margin: 0px 20px;
-
   }
   #inst {
     width: 17px;
   }
-
 }
   .copy {
     display: flex;
     background: rgba($black, 0);
     margin-top: 90px;
-
     ul {
       background: rgba($black, 0);
       list-style: none;
@@ -695,7 +667,6 @@ footer {
         left: 25px;
         right: 25px;
       }
-
     }
     li {
       background: rgba($black, 0);
@@ -705,27 +676,21 @@ footer {
         family: $sans-font;
         size: 14px;
         weight: 300;
-
       }
-
     }
     #main {
       font-weight: 600;
     }
-
-
   }
   .newsletter {
     background: rgba($black, 0);
-
   }
   .form {
     position: absolute;
     background: rgba($black, 0);
-    right: 50px;
+    right: 90px;
     top: 40px;
   }
-
   form {
     width: 400px;
     background: red;
@@ -733,40 +698,31 @@ footer {
     flex-direction: column;
     align-items: center;
     background: rgba($black, 0);
-
-
     justify-content: space-between;
     input {
+      border: 1px solid rgba($black, 0);
       margin-top: 15px;
       margin-bottom: 10px;
-
       }
       input[type="text"] {
-        width: 300px;
+        width: 400px;
         height: 30px;
       }
-      input[placeholder="enter your name"], input[placeholder="enter your email"] {
-        text-align: center;
-        font: {
-          family: $sans-font;
-          size: 16px;
-          weight: 300;
-        }
-      }
       input[type="submit"] {
-        width: 70px;
+        width: 90px;
         height: 40px;
         border: 1px solid rgba($black, 0);
-
+        letter-spacing: 1.5px;
         font: {
           family: $serif-font;
           size: 16px;
           weight: 300;
+          style: italic;
         }
       }
 p {
   background: rgba($black, 0);
-  width: 300px;
+  width: 400px;
   text-align: left;
   color: $white;
   letter-spacing: 1.5px;
@@ -789,13 +745,146 @@ p {
     size: 22px;
     weight: 300;
     style: italic;
+      }
+    }
   }
 }
-    }
+//animations
 
-
-
+@keyframes bluegrow {
+  from {
+    width: 0px;
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  to {
+    width: 1700px;
+    opacity: 1.0;
+  }
 }
 
+@keyframes pinkgrow {
+  from {
+    width: 0%;
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  to {
+    width: 100%;
+    opacity: 1.0;
+  }
+}
+@keyframes yellowgrow {
+  from {
+    height: 0px;
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+  to {
+    height: 500px;
+    opacity: 1.0;
+  }
+}
 
-//form
+@keyframes redgrow {
+  from {
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes plaidmoves {
+  from {
+    left: -500px;
+    opacity: 0.1;
+  }
+  to {
+    left: 280px;
+    opacity: 1.0;
+  }
+}
+@keyframes begmoves {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1.0;
+  }
+}
+@keyframes endoutlinemoves {
+  from {
+    right: -220px;
+    top: 430px;
+    opacity: 1.0;
+  }
+  to {
+    right: -160px;
+    top: 360px;
+    opacity: 1.0;
+  }
+}
+@keyframes begoutlinemoves {
+  from {
+    top: 10px;
+    left: -600px;
+    opacity: 0.1;
+  }
+  to {
+    top: -10px;
+    left: -610px;
+    opacity: 1.0;
+  }
+}
+
+@keyframes linemoves {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 50px;
+  }
+}
+
+@keyframes item1 {
+  from {
+    top: 0px;
+    right: -370px;
+  }
+  to {
+    top: -60px;
+    right: -400px;
+  }
+}
+
+@keyframes item2 {
+  from {
+    top: -30px;
+    right: -265px;
+  }
+  to {
+    top: 100px;
+    right: -365px;
+  }
+}
+
+@keyframes item3 {
+  from {
+    height: 460px;
+    top: 100px;
+  }
+  to {
+    height: 280px;
+    top: 300px;
+  }
+}

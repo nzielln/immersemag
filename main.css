@@ -79,28 +79,32 @@ nav #inst {
 .landing .blue {
   position: absolute;
   z-index: 0;
-  width: 1700px;
+  width: 0px;
   height: 600px;
   background: #83ede1;
   right: 20px;
   top: 300px;
+  animation: bluegrow 500ms linear 1s 1 normal forwards running;
 }
 .landing .yellow {
   position: absolute;
   z-index: 8;
   width: 40px;
-  height: 1800px;
+  height: 0px;
   background: #FFD984;
   right: 700px;
+  animation: yellowgrow 500ms linear 1s 1 normal forwards running;
 }
 .landing .lightpink {
   position: absolute;
-  width: 100%;
+  left: 0px;
+  width: 0%;
   height: 300px;
   background: #ffeded;
   z-index: 11;
   right: 20px;
   top: 600px;
+  animation: pinkgrow 500ms linear 1.1s 1 normal forwards running;
 }
 .landing .blue-copy {
   position: absolute;
@@ -118,15 +122,21 @@ nav #inst {
   z-index: 20;
 }
 .landing .blue-copy .img1 #red {
+  position: absolute;
   background: rgba(131, 237, 225, 0);
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   height: 600px;
+  width: 400px;
+  animation: redgrow 1s linear 1s 1 normal forwards running;
 }
 .landing .blue-copy .img2 {
   position: absolute;
   background: rgba(131, 237, 225, 0);
   top: 50px;
-  left: 280px;
+  left: -800px;
   z-index: 18;
+  animation: plaidmoves 800ms linear 1.3s 1 normal forwards running;
 }
 .landing .blue-copy .img2 #plaid {
   background: rgba(131, 237, 225, 0);
@@ -150,6 +160,8 @@ nav #inst {
   left: -600px;
   top: 10px;
   font-weight: 700;
+  opacity: 0;
+  animation: begmoves 1.2s linear 2.1s 1 normal forwards running;
 }
 .landing .title #line-start {
   -webkit-text-fill-color: transparent;
@@ -157,6 +169,7 @@ nav #inst {
   -webkit-text-stroke-width: 3px;
   top: -10px;
   left: -610px;
+  animation: begoutlinemoves 900ms linear 3.1s 1 normal forwards running;
 }
 .landing .title #end, .landing .title #line-end {
   background-color: rgba(0, 0, 0, 0);
@@ -165,6 +178,8 @@ nav #inst {
   right: -220px;
   top: 430px;
   font-weight: 700;
+  opacity: 0;
+  animation: begmoves 1.2s linear 2.1s 1 normal forwards running;
 }
 .landing .title #line-end {
   -webkit-text-fill-color: transparent;
@@ -172,12 +187,15 @@ nav #inst {
   -webkit-text-stroke-width: 4px;
   right: -160px;
   top: 360px;
+  animation: endoutlinemoves 900ms linear 3.1s 1 normal forwards running;
 }
 .landing .title .caption {
   position: absolute;
   background-color: rgba(0, 0, 0, 0);
   top: 280px;
   left: 1100px;
+  opacity: 0;
+  animation: begmoves 1.2s linear 2.1s 1 normal forwards running;
 }
 .landing .title .caption h3 {
   background-color: rgba(0, 0, 0, 0);
@@ -191,7 +209,8 @@ nav #inst {
   background-color: rgba(0, 0, 0, 0);
   font-style: italic;
   letter-spacing: 3px;
-  margin-left: 50px;
+  margin-left: 0px;
+  animation: linemoves 900ms linear 3.1s 1 normal forwards running;
 }
 
 .new-items {
@@ -201,7 +220,7 @@ nav #inst {
 }
 .new-items #title {
   position: absolute;
-  top: 900px;
+  top: 850px;
   height: 40px;
   background-color: rgba(0, 0, 0, 0);
   left: 50%;
@@ -218,10 +237,11 @@ nav #inst {
 }
 .new-items .box1 {
   position: absolute;
-  left: 160px;
+  left: 290px;
 }
 .new-items .box1 img {
   height: 550px;
+  border: 2px solid #ffa495;
 }
 .new-items .box1 #zagzig {
   position: absolute;
@@ -233,13 +253,18 @@ nav #inst {
 }
 .new-items .box1 .line-box {
   position: absolute;
-  top: -30px;
-  right: -400px;
+  top: 0px;
+  right: -370px;
   background-color: rgba(0, 0, 0, 0);
-  height: 530px;
-  width: 370px;
-  border: 2px solid #ffa495;
+  height: 550px;
+  width: 365px;
+  border: 3px solid #ffa495;
   z-index: 60;
+  animation: item1 900ms linear 1 normal forwards;
+  animation-play-state: paused;
+}
+.new-items .box1 .line-box:hover {
+  animation-play-state: running;
 }
 .new-items .box1 #item1-top {
   position: absolute;
@@ -315,6 +340,7 @@ nav #inst {
 }
 .new-items .box2 img {
   height: 550px;
+  border: 2px solid #83ede1;
 }
 .new-items .box2 .line-box {
   position: absolute;
@@ -325,6 +351,11 @@ nav #inst {
   width: 380px;
   border: 3px solid #83ede1;
   z-index: 0;
+  animation: item2 900ms linear 1 normal forwards;
+  animation-play-state: paused;
+}
+.new-items .box2 .line-box:hover {
+  animation-play-state: running;
 }
 .new-items .box2 #item2-top {
   position: absolute;
@@ -398,16 +429,22 @@ nav #inst {
 }
 .new-items .box3 img {
   height: 550px;
+  border: 2px solid #000000;
 }
 .new-items .box3 .line-box {
   position: absolute;
-  top: 300px;
+  top: 100px;
   right: -325px;
   background-color: rgba(0, 0, 0, 0);
-  height: 280px;
+  height: 460px;
   width: 500px;
   border: 3px solid #000000;
   z-index: 60;
+  animation: item3 900ms linear 1 normal forwards;
+  animation-play-state: paused;
+}
+.new-items .box3 .line-box:hover {
+  animation-play-state: running;
 }
 .new-items .box3 #item3-top {
   position: absolute;
@@ -577,7 +614,7 @@ footer .newsletter {
 footer .form {
   position: absolute;
   background: rgba(0, 0, 0, 0);
-  right: 50px;
+  right: 90px;
   top: 40px;
 }
 footer form {
@@ -590,30 +627,27 @@ footer form {
   justify-content: space-between;
 }
 footer form input {
+  border: 1px solid rgba(0, 0, 0, 0);
   margin-top: 15px;
   margin-bottom: 10px;
 }
 footer form input[type=text] {
-  width: 300px;
+  width: 400px;
   height: 30px;
 }
-footer form input[placeholder="enter your name"], footer form input[placeholder="enter your email"] {
-  text-align: center;
-  font-family: "Muli", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-}
 footer form input[type=submit] {
-  width: 70px;
+  width: 90px;
   height: 40px;
   border: 1px solid rgba(0, 0, 0, 0);
+  letter-spacing: 1.5px;
   font-family: "Playfair Display", serif;
   font-size: 16px;
   font-weight: 300;
+  font-style: italic;
 }
 footer form p {
   background: rgba(0, 0, 0, 0);
-  width: 300px;
+  width: 400px;
   text-align: left;
   color: #ffffff;
   letter-spacing: 1.5px;
@@ -633,6 +667,136 @@ footer form #head {
   font-size: 22px;
   font-weight: 300;
   font-style: italic;
+}
+
+@keyframes bluegrow {
+  from {
+    width: 0px;
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  to {
+    width: 1700px;
+    opacity: 1;
+  }
+}
+@keyframes pinkgrow {
+  from {
+    width: 0%;
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+@keyframes yellowgrow {
+  from {
+    height: 0px;
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+  to {
+    height: 500px;
+    opacity: 1;
+  }
+}
+@keyframes redgrow {
+  from {
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+@keyframes plaidmoves {
+  from {
+    left: -500px;
+    opacity: 0.1;
+  }
+  to {
+    left: 280px;
+    opacity: 1;
+  }
+}
+@keyframes begmoves {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes endoutlinemoves {
+  from {
+    right: -220px;
+    top: 430px;
+    opacity: 1;
+  }
+  to {
+    right: -160px;
+    top: 360px;
+    opacity: 1;
+  }
+}
+@keyframes begoutlinemoves {
+  from {
+    top: 10px;
+    left: -600px;
+    opacity: 0.1;
+  }
+  to {
+    top: -10px;
+    left: -610px;
+    opacity: 1;
+  }
+}
+@keyframes linemoves {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 50px;
+  }
+}
+@keyframes item1 {
+  from {
+    top: 0px;
+    right: -370px;
+  }
+  to {
+    top: -60px;
+    right: -400px;
+  }
+}
+@keyframes item2 {
+  from {
+    top: -30px;
+    right: -265px;
+  }
+  to {
+    top: 100px;
+    right: -365px;
+  }
+}
+@keyframes item3 {
+  from {
+    height: 460px;
+    top: 100px;
+  }
+  to {
+    height: 280px;
+    top: 300px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
